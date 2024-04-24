@@ -1,0 +1,120 @@
+@charset "UTF-8";
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    padding: 0 10px;
+    background: url(./img/b6.jpeg);
+
+}
+.containerr{
+    /* border: 2px solid black; */
+    max-width: 700px;
+    width: 100%;
+    background-color: aliceblue;
+    margin: 20px auto;
+    padding: 30px;
+    box-shadow: 10px 10px 2px rgba(0,0,0,0.5);
+}
+.containerr .title{
+     font-size: 20px;
+     font-weight: 500;
+     margin-bottom: 25px;
+     text-align: center;
+     text-transform:uppercase;
+}
+.input_field{
+    margin-bottom: 15px;
+    display: flex;
+     text-align: center;
+}
+.input_field label{
+     width: 200px;
+     margin-right: 10px;
+     font-size: 15px;
+}
+.input_field .input,.textarea{
+    width: 100%;
+    outline: none;
+    font-size: 15px;
+    padding: 8px 10px;
+    border-radius: 2px;
+
+}
+.textarea{
+   resize: none;
+   height: 100px;
+}
+
+.input_field p{
+    font-size: 14px ;
+     color: black;
+}
+ .containerr .form .input_field .check{ 
+    width: 15px;
+    height: 15px;
+    position: relative;
+    display: block;
+    cursor: pointer;
+}
+.containerr .form .input_field .check input[type="checkbox"]{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /* opacity: 0; */
+}
+.containerr .form .input_field .check .checkmark{
+    width: 15px;
+    height: 15px;
+    border: 1px solid black;
+    display: block;
+    position: relative;
+    background: green;
+}
+.containerr .form .input_field .check .checkmark:before{
+     content: " ";
+    position: absolute;
+    top: 1px;
+    left: 2px;
+    width: 5px;
+    height: 2px;
+    border: 2px solid;
+    border-color: transparent transparent white white;
+    transform: rotate(-45deg);
+}
+.containerr .form .input_field .check input[type="checkbox"]:checked ~ .checkmark{
+    background:white;
+}
+.containerr .form .input_field .check input[type="checkbox"]:checked ~ .checkmark:before{
+    display: block;
+}
+.containerr .form .input_field .btn{
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 15px;
+  border: 0;
+  background:black;
+  color: white;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.containerr.form .input_field:last-child{
+    margin-bottom: 0px;
+}
+.containerr .form .input_field .btn:hover{
+    background: green;
+}
+@media(max-width:420px){
+    .containerr .form .input_field{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .containerr .form .input_field label{
+        margin-bottom: 5px;  
+    }
+    .containerr .form .input_field.terms{
+        flex-direction: row;
+    }
+}
